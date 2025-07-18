@@ -7,6 +7,7 @@ const showWinner = (userwin) => {
         //win
         console.log('You Win!!')
         msg.innerText = 'You Win!!'
+        msg.style.backgroundColor = 'green'
         userScore += 1
         document.querySelector('#user-score').innerText = userScore
     }
@@ -14,6 +15,7 @@ const showWinner = (userwin) => {
         //lose
         console.log('You Lose!!')
         msg.innerText = 'You Lose!!'
+        msg.style.backgroundColor = 'red'
         compScore += 1
         document.querySelector('#comp-score').innerText = compScore
     }
@@ -34,6 +36,7 @@ const playGame = (userChoice) => {
         //draw
         console.log('Game Was Draw')
         msg.innerText = 'Game was Draw'
+        msg.style.backgroundColor = '#081b31'
     }
     else{
         let userwin = true
@@ -82,7 +85,6 @@ btn.addEventListener('click',() => {
     }
     // h1.style.backgroundColor = '#081b31'
     // h1.style.color = 'white'
-    // msg.style.backgroundColor = '#081b31'
     // msg.style.color = 'white'
 })
 

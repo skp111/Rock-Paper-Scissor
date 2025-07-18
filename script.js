@@ -2,11 +2,11 @@ let userScore = 0
 let compScore = 0
 
 let msg=document.querySelector('#msg')
-const showWinner = (userwin) => {
+const showWinner = (userwin,userChoice,compChoice) => {
     if(userwin){
         //win
         console.log('You Win!!')
-        msg.innerText = 'You Win!!'
+        msg.innerText = `You Win!! your ${userChoice} beats ${compChoice}`
         msg.style.backgroundColor = 'green'
         userScore += 1
         document.querySelector('#user-score').innerText = userScore
@@ -14,7 +14,7 @@ const showWinner = (userwin) => {
     else{
         //lose
         console.log('You Lose!!')
-        msg.innerText = 'You Lose!!'
+        msg.innerText = `You Lose!! ${compChoice} beats your ${userChoice}`
         msg.style.backgroundColor = 'red'
         compScore += 1
         document.querySelector('#comp-score').innerText = compScore
@@ -35,7 +35,7 @@ const playGame = (userChoice) => {
     if(userChoice === compChoice){
         //draw
         console.log('Game Was Draw')
-        msg.innerText = 'Game was Draw'
+        msg.innerText = 'Game was Draw! Play Again'
         msg.style.backgroundColor = '#081b31'
     }
     else{
@@ -52,7 +52,7 @@ const playGame = (userChoice) => {
             //rock , paper
             userwin = compChoice === 'rock' ? false:true
         }
-        showWinner(userwin)
+        showWinner(userwin,userChoice,compChoice)
     }
 }
 

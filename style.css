@@ -1,26 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
     width: 100%;
     height: 100%;
 }
 
 h1 {
-    background-color: #081b31;
+    background-color: #081b31 !important;
+    color: white !important;
     height: 10vh;
     line-height: 10vh;
     width: 100%;
 }
 
+#btn{
+    color: black;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+}
+
 .choices {
-    height: 50vh;
+    height: 40vh;
 }
 
 .choice {
     width: 16vw;
     height: 16vw;
+    border-radius: 50%;
 }
 
 .choice img {
     border-radius: 50%;
+    filter: brightness(75%);
 }
 
 img:hover {
@@ -30,7 +44,7 @@ img:hover {
 }
 
 .score-board {
-    height: 15vh;
+    height: 13vh;
 }
 
 span {
@@ -39,21 +53,14 @@ span {
 }
 
 #msg {
-    background-color: #081b31;
-    color: white;
+    background-color: #081b31 !important;
+    color: white !important;
 }
 
 #user-score,
 #comp-score {
     font-size: 30px;
     font-weight: 800;
-}
-
-@media (max-width:575px) {
-    .choice {
-        width: 30vw;
-        height: 30vw;
-    }
 }
 
 @media (max-width:991px) {
@@ -73,5 +80,15 @@ span {
     #comp-score {
         font-size: 40px;
         font-weight: 800;
+    }
+}
+
+@media (max-width:575px) {
+    h2{
+        font-size: 30px;
+    }
+
+    span {
+        font-size: 25px;
     }
 }

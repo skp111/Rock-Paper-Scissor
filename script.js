@@ -61,3 +61,28 @@ choices.forEach(choice => {
         playGame(userChoice)
     })
 });
+
+let h1=document.querySelector('h1')
+
+let btn = document.querySelector('#btn')
+let theme = document.querySelector('body')
+btn.addEventListener('click',() => {
+    theme.classList.toggle('light')
+    if (theme.classList.contains('light')) {
+        theme.style.backgroundColor = 'black'
+        theme.style.color = 'white'
+        btn.children[0].classList.replace('fa-moon','fa-sun')
+        btn.style.color = 'yellow'
+    }
+    else{
+        theme.style.backgroundColor = 'white'
+        theme.style.color = 'black'
+        btn.children[0].classList.replace('fa-sun','fa-moon')
+        btn.style.color = 'black'
+    }
+    // h1.style.backgroundColor = '#081b31'
+    // h1.style.color = 'white'
+    // msg.style.backgroundColor = '#081b31'
+    // msg.style.color = 'white'
+})
+
